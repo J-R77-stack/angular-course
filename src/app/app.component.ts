@@ -6,8 +6,17 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'angular-course';
+  data = {
+    title: 'Hello Angular',
+  };
+  onButtonClick() {
+    alert('Hello World');
+  }
+
+  onKeyUp(newTitle: string) {
+    this.data.title = newTitle;
+  }
 }
